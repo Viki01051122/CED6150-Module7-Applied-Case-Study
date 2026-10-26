@@ -1,0 +1,45 @@
+{
+  "project": "CED6150 Module 7 individual case study",
+  "seed": 42,
+  "tickers": [
+    "SPY",
+    "QQQ",
+    "^VIX"
+  ],
+  "start_inclusive": "2018-01-01",
+  "end_exclusive": "2026-01-01",
+  "test_period": "2025 calendar year",
+  "train_period": "2018-2024; purge final observation",
+  "label": "next-day SPY absolute unadjusted close-to-close return > fixed pre-declared 1.5% cutoff",
+  "high_risk_cutoff": 0.015,
+  "features": [
+    "spy_amihud_5d",
+    "spy_spread_5d",
+    "spy_vol_10d",
+    "spy_ret",
+    "qqq_amihud_5d",
+    "qqq_spread_5d",
+    "qqq_vol_10d",
+    "qqq_ret",
+    "vix_close",
+    "vix_change_1d",
+    "vix_lag1"
+  ],
+  "n_cv_folds": 5,
+  "cv_gap_days_in_rows": 1,
+  "models": [
+    "Regularized logistic GLM",
+    "Random forest"
+  ],
+  "selected_model": "Regularized logistic GLM",
+  "decision_threshold": 0.2599999999999999,
+  "false_negative_cost_units": 5,
+  "false_positive_cost_units": 1,
+  "data_limitations": [
+    "Corwin-Schultz is a high-low proxy, not quoted or effective spread",
+    "Amihud from daily close and volume, not intraday trades",
+    "VIX and ETF series downloaded through Yahoo Finance; source attribution needed",
+    "Illustrative costs only; not investment advice",
+    "Unadjusted-close returns ignore ETF distributions"
+  ]
+}

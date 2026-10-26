@@ -1,0 +1,5 @@
+,auc,auc,pr_auc,pr_auc
+,mean,std,mean,std
+model,,,,
+Random forest,0.758,0.0697,0.3687,0.1467
+Regularized logistic GLM,0.772,0.0711,0.3845,0.2029

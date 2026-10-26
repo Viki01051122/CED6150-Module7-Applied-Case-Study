@@ -1,0 +1,17 @@
+variable,definition_and_units,data_source
+date,"Trading date, YYYY-MM-DD",Yahoo Finance via yfinance; derived where noted
+ticker,ETF name (SPY or QQQ),Yahoo Finance via yfinance; derived where noted
+open,USD/share; Yahoo unadjusted OHLC,Yahoo Finance via yfinance; derived where noted
+high,USD/share; Yahoo unadjusted OHLC,Yahoo Finance via yfinance; derived where noted
+low,USD/share; Yahoo unadjusted OHLC,Yahoo Finance via yfinance; derived where noted
+close,USD/share; Yahoo unadjusted OHLC,Yahoo Finance via yfinance; derived where noted
+volume,Shares traded,Yahoo Finance via yfinance; derived where noted
+ret,"Daily percentage return in decimal, using unadjusted close",Yahoo Finance via yfinance; derived where noted
+dollar_volume,USD/day (close × shares),Yahoo Finance via yfinance; derived where noted
+amihud_1e9,|return|/USD volume × 10^9,Yahoo Finance via yfinance; derived where noted
+cs_spread,"Corwin-Schultz two-day estimated relative spread, decimal; nonnegative clipped",Yahoo Finance via yfinance; derived where noted
+amihud_5d,Trailing 5 trading day mean Amihud scaled measure,Yahoo Finance via yfinance; derived where noted
+spread_5d,Trailing 5 trading day mean Corwin-Schultz spread,Yahoo Finance via yfinance; derived where noted
+vol_10d,"Trailing 10 trading day return standard deviation, decimal",Yahoo Finance via yfinance; derived where noted
+vix_close,"VIX index level, joined by date (risk indicator, not liquidity)",Yahoo Finance via yfinance; derived where noted
+high_risk_next_day,1 if next trading day |SPY return| exceeds fixed pre-declared 1.5% cutoff,Yahoo Finance via yfinance; derived where noted
